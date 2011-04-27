@@ -1,7 +1,14 @@
-\documentclass{article}[8pt]
-\usepackage[margin=2cm]{geometry}
+\documentclass[8pt, letter]{extarticle}
+\usepackage[margin=.17in]{geometry}
 \usepackage{multicol}
 \usepackage{enumitem}
+
+\usepackage{setspace}
+\singlespacing
+%\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+
 
 \begin{document}
 
@@ -45,35 +52,74 @@
 
     \subsection{Project life cycle}
     \begin{itemize}
-        \item Defining
-        \item Planning
-        \item Executing
-        \item Delivering
+        \item Defining stage – objects established, teams are formed, responsibilities are assigned. 
+        \item Planning stage – what project will entail, when it will be scheduled, whom it will benefit, what quality level should be maintained, and what the budget will be. 
+        \item Executing stage – most work takes place. Time, cost, measures. 
+        \item Delivering stage: Two activities : delivering the project product to the customer and redeploying project resources.
     \end{itemize}
 
     \subsection{The strategic management process}
+    \begin{enumerate}
+        \item Review and define the Organizational mission. 
+        \item Set long-range goals and objectives. 
+        \item Analyze and formulate strategies to reach objectives. 
+        \item Implement strategies through projects.
+    \end{enumerate}
 
     \subsection{Project Portfolios and types of projects}
+    \begin{enumerate}
+        \item Compliance - absolutely must do, oil spill
+        \item Operational - not routine, but required to support current operations
+        \item Strategic - advances company mission, improves market share, etc.
+    \end{enumerate}
 
     \subsection{Project Selection models}
-
     \subsection{Defining the project}
+    \begin{tabular}{ l l l l l }
+        Criteria    & Urgency & Strategic fit & ROI of 18\%+ & Weighted Total     \\
+        Weight      & 2.0   & 3.0   & 3.0   & --    \\
+        Project 1   & 1     & 8     & 2     & 32    \\
+        Project 2   & 3     & 3     & 4     & 27    \\
+        Project n   & x     & x     & x     & x     \\
+    \end{tabular}
     \begin{itemize}
-        \item Project Scope - deliverables, time, features, etc.
+        \item Project Scope - cost, deliverables, time, features, etc.
         \item Project Objective statement - does it align with company mission?
         \item Project scope checklist
         \item Importance of project scope
         \item Scope creep - project becomes more than it was intended to be
-
         \item Project Priority Matrix - apply numbers to proj characteristics
+            \\
+            \begin{tabular}{ l c c c }
+                --&         Time&Performance& Cost  \\
+                Constrain   &   O   &       &       \\
+                Enhance     &       &   O   &       \\
+                Accept      &       &       &   O   \\
+            \end{tabular}
         \item Managing the trade-offs
         \item Work Breakdown Structure
+            \begin{itemize}
+                \item hierarchical organization of all sub-projects
+                \item doesn't take time into account
+            \end{itemize}
         \item Work Packages—what, who, how long, monetary metrics
         \item Linkages between tasks
         \item Gantt Chart
+            \begin{enumerate}
+                \item Networks flow typically from left to right.
+                \item Anactivity cannot begin until all preceding connected activities have been completed.
+                \item Arrows on networks indicate precendence and flow. Arrows can cross over each other.
+                \item Each activity should have a unique identification number.
+                \item Anactivity identification number must be larger than that of any activities that precede it.
+                \item Looping is not allowed (in other words, recycling through a set of activities cannot take place).
+            \end{enumerate}
+        \item Communication Plans
             \begin{itemize}
-                \item shows task predecessors and durations
-                \item Communication Plan
+                \item Stakeholder analysis – Identify the target groups. 
+                \item Information needs – what information is stakeholders to contribute to project's progress. 
+                \item Sources of information – what information needs are identified, the next step is to determine the sources of information. 
+                \item Dissemination modes – methods of information travel. 
+                \item Responsibility and timing – Determine who will send out the information.
             \end{itemize}
     \end{itemize}
 
@@ -81,11 +127,27 @@
     \begin{itemize}
         \item Factors affecting estimates
         \item Top Down: 
-        \item Ratio,  Apportionment,  Function Point,  Learning Curve
+            \begin{itemize}
+                \item Consensus - Uses the pooled experiences of senior and middle managers to estimate.
+                \item Ratio - \$ per foot of construction project
+                \item Apportionment - extension of ratio, used when there is known historical data.
+                \item Function Point - Major parameters, \#I/O, interfaces, data, inquiries.
+                \item Learning Curve - Time to perform a task improves with repetition.  Each time the output quantity doubles, the unit labor hours are reduced at as constant rate.
+            \end{itemize}
         \item Bottom Up:
-        \item Template,  Parametric,  Detailed
+            \begin{itemize}
+                \item Template - Past projects are used as a starting point.
+                \item Parametric - Similar to ratio, but from the ground up.
+                \item Detailed - Use the WBS and have people responsible for each section make the estimates.
+            \end{itemize}
         \item Phase Estimating (a hybrid) 
         \item Refining Estimates
+            \begin{itemize}
+                \item Interaction costs are hidden in estimates.  Tasks are rarely completed in a vacuum.
+                \item Normal conditions do not apply. Availability of resources may change.
+                \item Things go wrong on projects. Design flaws, etc.
+                \item Changes in project scope and plans.
+            \end{itemize}
     \end{itemize}
 
     \subsection{Project Plan Development}
@@ -98,6 +160,11 @@
                 \item Critical Path
                 \item Slack
             \end{itemize}
+            \begin{tabular}{ l l l }
+                Early Start & ID            & Early Finish  \\
+                Slack       & Description   & Slack         \\
+                Late Start  & Duration      & Late Finish   \\
+            \end{tabular}
     \end{itemize}
 
     \subsection{Project Managers}
@@ -116,9 +183,33 @@
         \item Events, not outcomes
         \item Use multiple methods
         \item Risk Assessment
-        \item FMEA, Scenario Analysis,  Probability Analysis
-        \item Risk Response Planning
-        \item Retain,  Mitigate,  Transfer,  Share,  Avoid
+        \item FMEA - is a procedure in product development and operations management for analysis of potential failure modes within a system for classification by the severity and likelihood of the failures.
+            \begin{itemize}
+                \item Failure - "The LOSS of an intended function of a device under stated conditions."
+                \item Failure mode - "The manner by which a failure is observed; it generally describes the way the failure occurs."
+                \item Failure effect - Immediate consequences of a failure on operation, function or functionality, or status of some item
+                \item Indenture levels - An identifier for item complexity. Complexity increases as levels are closer to one.
+                \item Local effect - The Failure effect as it applies to the item under analysis.
+                \item Next higher level effect - The Failure effect as it applies at the next higher indenture level.
+                \item End effect - The failure effect at the highest indenture level or total system.
+                \item Failure cause - Defects in design, process, quality, or part application, which are the underlying cause of the failure or which initiate a process which leads to failure.
+                \item Severity - "The consequences of a failure mode. Severity considers the worst potential consequence of a failure, determined by the degree of injury, property damage, or system damage that could ultimately occur." 
+            \end{itemize}
+
+        \item Scenario Analysis - process of analyzing possible future events by considering alternative possible outcomes (scenarios). 
+            \begin{itemize}
+                \item does not try to show one exact picture of the future
+                \item it presents consciously several alternative future developments
+            \end{itemize}
+        \item Probability Analysis - analysis using the probability of different scenarios
+        \item Risk Response Planning - determine what to do if a risk leads to some consequence
+            \begin{itemize}
+                \item Retain
+                \item Mitigate
+                \item Transfer
+                \item Share
+                \item Avoid
+            \end{itemize}
         \item Contingency Plans
         \item Risk Management and Change Control
     \end{itemize}
@@ -126,14 +217,26 @@
     \begin{itemize}
         \item Resource Allocation \& Management
         \item Types of Project Constraints
+            \begin{itemize}
+                \item Technical/Logic - constraints related to the networked sequence in which project activities must occur
+                \item Resource - The absence, shortage, or unique interrelationship and interaction characteristics of resources that require a particular sequencing of project activities
+                \item Physical - not enough space to work, project not feasible
+            \end{itemize}
         \item Time Constrained or Resource Constrained
-        \item Resource Leveling
+        \item Resource Leveling - involves attempting to even out demands on resources by using slack (delaying noncritical activities) to manage resource utilization
         \item Types of Resource Constraints
+            \begin{itemize}
+                \item People - workers, managers, engineers, techs, etc.
+                \item Materials - concrete, pcbs, wood
+                \item Equipment
+                \item Working Capital
+            \end{itemize}
         \item Effects on logical plan
         \item Heuristics for Resource Leveling
             \begin{enumerate}
-                \item ADD A LIST HERE
-                \item YEAH
+                \item Minimum slack
+                \item Shortest duration
+                \item Lowest activity identification number
             \end{enumerate}
     \end{itemize}
 
